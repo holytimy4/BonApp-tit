@@ -166,6 +166,10 @@ body {
   border-bottom: 1px solid white;
 }
 
+.menu__btn {
+  display: none;
+}
+
 .intro {}
 
 .slider {
@@ -281,7 +285,7 @@ body {
 .title:before {
   content: "";
   top: 0;
-  left: -10%;
+  left: -5%;
   position: absolute;
   width: 30px;
   height: 20px;
@@ -294,7 +298,7 @@ body {
   content: "";
   position: absolute;
   bottom: 0;
-  right: -10%;
+  right: -5%;
   width: 30px;
   height: 20px;
   border-bottom: 2px solid #dfc187;
@@ -312,6 +316,19 @@ body {
   height: 30px;
 }
 
+.recipes{
+  margin-bottom: 150px;
+}
+
+.callback {
+  padding-bottom: 150px;
+  padding-top: 100px;
+}
+
+.social {
+  padding-top: 150px;
+}
+
 .recipes__filters-btn {
   margin: 0 auto;
   max-width: 600px;
@@ -326,6 +343,7 @@ body {
 }
 
 .recipes__button {
+  cursor: pointer;
   padding: 8px;
   border: none;
   font-weight: 400;
@@ -368,16 +386,15 @@ body {
 }
 
 .recipes__item-img {
-  object-fit: contain;
-  width: 250px;
-  top: 0;
+  object-fit: cover;
+  min-width: 300px;
 }
 
 .recipes__item-content {
-  margin: 30px;
+  margin: 30px 30px 10px;
   display: flex;
   flex-direction: column;
-  height: 190px;
+  min-height: 240px;
 
 
 }
@@ -390,13 +407,28 @@ body {
   font-size: 17px;
 }
 
+.recipes__item-ing {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.recipes__item-info {
+  padding-left: 15px;
+}
+
+.recipes__item-info li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .more__wrapper {
   margin-top: auto;
   max-width: 786px;
   text-align: center;
 }
 
-.more {
+.more-btn {
+  padding-top: 10px;
   padding-bottom: 8px;
   border: none;
   font-weight: 400;
@@ -407,13 +439,273 @@ body {
   outline: transparent;
   border-bottom: 1px solid transparent;
   transition: all linear 0.3s;
+  cursor: pointer;
 }
 
-.more:hover {
+.more-btn:hover {
   border-bottom: 1px solid #fff; 
 }
 
-.more:active {
+.more-btn:active {
   color: #dfc187;
   border-bottom: 1px solid #dfc187; 
+}
+
+#more, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9 {
+  display: none;
+}
+
+.callback {
+  background-color: #332A24;
+}
+
+.callback__inner {
+  display: flex;
+}
+
+.callback__form {
+  width: 50%;
+  margin-right: 40px;
+}
+
+.collback__img {
+  margin: auto;
+  max-width: 515px;
+}
+
+.callback__input, .callback__message {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #DADADA;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 0 20px;
+  margin-bottom: 26px;
+  outline: transparent;
+  background-color: transparent;
+  color: #fff;
+}
+
+.callback__submit {
+    text-align: center;
+    padding: 22px 50px;
+    border: 1px solid #fff;
+    color: #242121;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    outline: transparent;
+
+    transition: all 0.3s;
+  }
+
+.callback__submit:hover {
+  border: 1px solid #dfc187;
+  background-color: #dfc187;
+}
+
+.iphone {
+  position: relative;
+  min-height: 900px;
+}
+
+.iphone__phone {
+  height: 810px; width: 435px; 
+  position: absolute;
+  margin: auto;
+  top: 0px; bottom: 80px; left: 0px; right: 0px;
+  background: url('https://hoidrop.s3-us-west-2.amazonaws.com/cp_social_app_iphone.png') no-repeat center center; 
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+.iphone__screen {
+  height: 568px; width: 320px;
+  position: absolute;
+  top: 119px; left: 59px;
+  overflow: hidden;
+  position: relative;
+}
+
+.iphone__menu {
+  position: absolute;
+  height: 100%; width: 100%;
+  background: url('https://media.discordapp.net/attachments/764520914867585044/831543396819664946/phone.jpg?width=381&height=676') no-repeat center center; 
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+  
+.iphone__status {
+  position: absolute;
+  top: 0px; left: 0px;
+  z-index: 200;
+  height: 20px; width: 100%;
+  background: url('https://hoidrop.s3-us-west-2.amazonaws.com/cp_social_app_status_black.png') no-repeat center center; 
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.social__inner {
+  display: flex;
+}
+
+.social__content {
+  padding: 200px 0;
+  padding-right: 200px;
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social__link:hover svg {
+  transition: all 0.3s;
+  fill: #dfc187;
+}
+
+.social__text {
+  margin-bottom: 40px;
+}
+
+.title--small {
+  font-weight: 400;
+  display: table;
+  width: auto;
+  margin: 15px auto 40px;
+  padding-bottom: 9px;
+  letter-spacing: 2px;
+  position: relative;
+  font-size: 35px;
+}
+
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  background-color: #332A24;
+}
+
+@media only screen and (max-width : 1720px) {
+  .slider__content {
+    margin-right: 40%;
+  }
+}
+
+@media only screen and (max-width : 1330px) {
+  .slider__content {
+    margin-right: 20%;
+  }
+  .social__content {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media only screen and (max-width : 1180px) {
+  .slider__content {
+    margin-right: 5%;
+  }
+  .recipes__item {
+    max-width: 800px;
+  }
+  .recipes__item-img {
+    max-width: 200px;
+  }
+  .collback__img {
+    max-width: 400px;
+  }
+  .social__content {
+    padding: 0 50px 100px 50px;
+  }
+  .social__inner {
+    flex-direction: column;
+  }
+  .social__text {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width : 900px) {
+  .slider__title {
+    font-size: 35px;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .collback__img {
+    display: none;
+  }
+  .callback__form {
+    width: 100%;
+    margin: 0;
+  }
+  .callback__btn {
+    text-align: center;
+  }
+  .recipes__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .recipes__item-info,
+  .recipes__item-desc ul {
+    text-align: left;
+  }
+  .title::after,
+  .title::before {
+    display: none;
+  }
+  .menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    text-align: center;
+    transition: all 0.5s;
+    transform: translateY(-200%);
+  }
+  .menu__btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    position: relative;
+    z-index: 2;
+  }
+  .header__inner {
+    justify-content: space-around;
+  }
+}
+
+
+
+@media only screen and (max-width : 533px) {
+  .social__phone {
+    transform: scale(0.7);  
+  }
+  .slider__content {
+    margin-right: 0%;
+  }
+  .title {
+    font-size: 33px;
+  }
+  .title--small {
+    font-size: 28px;
+  }
 }
