@@ -1,0 +1,419 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-color: #1D130C;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.038em;
+  color: white;
+
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 100%;
+  margin: 0 auto;
+
+  background-color: #1D130C;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 60px 0;
+  transition: all 0.3s;
+}
+
+.header__inner:hover {
+  padding: 80px 60px;
+}
+
+.header__inner:hover .menu {
+  visibility: visible;
+}
+
+.header__logo {
+  max-width: 100px;
+  pointer-events: none;
+}
+
+.header__title {
+  font-size: 50px;
+  font-weight: 500;
+  cursor: default;
+}
+
+.header__title::selection {
+  background: transparent;
+}
+
+.menu {
+  position: absolute;
+  transform: translateY(300%);
+  visibility: hidden;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.menu__link {
+  font-family: 'ubuntu';
+  font-size: 20px;
+  font-weight: 300;
+
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+  padding-bottom: 5px;
+}
+
+.menu__link:focus {
+  color: #e0e7f5;
+  border-bottom: 1px solid #e0e7f5;
+}
+
+.menu__link:hover {
+  border-bottom: 1px solid white;
+}
+
+.menu__link:active {
+  border-bottom: 1px solid white;
+}
+
+.intro {}
+
+.slider {
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.slider__item {
+  width: 100%;
+  padding: 190px 100px;
+  position: relative;
+
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__item::after {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(36, 33, 33, 0.5);
+}
+
+.slider__content {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  margin-left: 10px;
+  margin-right: 55%;
+  color: #fff;
+
+  position: relative;
+  z-index: 9;
+  padding: 20px;
+  border-radius: 2px;
+  border: 1px solid #fff;
+
+}
+
+.slider__content::after {
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(36, 33, 33, 0.5);
+}
+
+.slider__title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: auto;
+  z-index: 11;
+}
+
+.slider__text {
+  font-size: 20px;
+  z-index: 11;
+  margin-top: auto;
+}
+
+.slider__subtitle {
+  margin-bottom: auto;
+}
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  bottom: 97px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slick-dots button {
+  border: none;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 0;
+  cursor: pointer;
+  outline: transparent;
+}
+
+.slick-dots button {
+  margin-right: 15px;
+}
+
+.slick-active button {
+  background-color: #dfc187;
+}
+
+.title {
+  font-size: 55px;
+  font-weight: 400;
+  display: table;
+  width: auto;
+  margin: 15px auto;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.title__wrapper {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.title:before {
+  content: "";
+  top: 0;
+  left: -10%;
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  border-top: 2px solid #dfc187;
+  border-left: 2px solid #dfc187;
+  transition: all linear 0.2s;
+}
+
+.title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  width: 30px;
+  height: 20px;
+  border-bottom: 2px solid #dfc187;
+  border-right: 2px solid #dfc187;
+  transition: all linear 0.2s;
+}
+
+.title:hover::before {
+  width: 60px;
+  height: 30px;
+}
+
+.title:hover::after {
+  width: 60px;
+  height: 30px;
+}
+
+.recipes__filters-btn {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recipes__filters-btn {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.recipes__button {
+  padding: 8px;
+  border: none;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  background-color: transparent;
+  color: #fff;
+  outline: transparent;
+  border-bottom: 1px solid transparent;
+  transition: all linear 0.2s;
+}
+
+.recipes__button:hover {
+  border-bottom: 1px solid #fff; 
+}
+
+.recipes__button:focus,
+.recipes__button:active {
+  color: #dfc187;
+  border-bottom: 1px solid #dfc187; 
+}
+
+.recipes__content {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.recipes__item {
+  display: flex;
+  align-items: flex-start;
+  max-width:1100px;
+  border: 2px solid #dfc187;
+  border-radius: 2px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.recipes__item:not(:last-child){
+  margin-bottom: 30px;
+}
+
+.recipes__item-img {
+  object-fit: contain;
+  width: 250px;
+  top: 0;
+}
+
+.recipes__item-content {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 190px;
+
+
+}
+
+.recipes__item-title {
+  font-size: 25px;
+}
+
+.recipes__item-desc {
+  font-size: 17px;
+}
+
+.more__wrapper {
+  margin-top: auto;
+  max-width: 786px;
+  text-align: center;
+}
+
+.more {
+  padding-bottom: 8px;
+  border: none;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  background-color: transparent;
+  color: #fff;
+  outline: transparent;
+  border-bottom: 1px solid transparent;
+  transition: all linear 0.3s;
+}
+
+.more:hover {
+  border-bottom: 1px solid #fff; 
+}
+
+.more:active {
+  color: #dfc187;
+  border-bottom: 1px solid #dfc187; 
+}
